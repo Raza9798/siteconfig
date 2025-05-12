@@ -1,13 +1,20 @@
 {
-    "name": "intelrx/sitesettings",
-    "description": "Application global properties",
-    "require": {
-        "php": "^8.3"
-    },
+    "name": "raza9798/siteconfig",
+    "description": "A Laravel package for managing site configurations.",
+    "keywords": [
+        "laravel",
+        "siteconfig",
+        "configuration",
+        "settings",
+        "environment",
+        "application",
+        "package",
+        "php"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Intelrx\\Sitesettings\\": "src/"
+            "Core\\Siteconfig\\": "src/"
         }
     },
     "authors": [
@@ -17,10 +24,13 @@
         }
     ],
     "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "Intelrx\\Sitesettings\\SitesettingsProvider"
+                "Core\\Siteconfig\\SiteconfigServiceProvider"
             ]
         }
     }

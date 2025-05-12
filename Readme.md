@@ -1,56 +1,21 @@
 # SiteConfig Laravel Package
-This Laravel package provides a simple and efficient way to manage site settings. You can store, retrieve, update, and delete configuration settings on a application using the SiteConfig class.
+This Laravel package provides a simple and efficient way to manage site settings / enviromental variables via database. You can store, retrieve, update, and delete configuration settings on a application using the SiteConfig class.
+
 
 ## Installation
 To install the package, add it to your Laravel project using Composer:
-```php
-composer require intelrx/sitesettings
+```shell
+$ composer require raza9798/siteconfig
+$ php artisan siteconig:env-sync
 ```
 
 # Usage
-Import the package in your class
+
+usage in the web base application
 ```php
-use Intelrx\Sitesettings\SiteConfig;
-
-SiteConfig::store('phone', '1234567890');
-SiteConfig::get('phone');
-SiteConfig::update('phone', '18487');
-SiteConfig::delete('phone');
-SiteConfig::list()
-```
-
-usage in the blade
-```php
-{{ SiteConfig::get('phone') }}
-```
-
-## Storing Settings
-To store a new site setting, use the store method:
-
-```php
-SiteConfig::store('phone', '1234567890');
-```
-
-## Retrieving Settings
-To retrieve a stored site setting, use the get method:
-```php
-$phone = SiteConfig::get('phone');
-```
-
-## Updating Settings
-To update an existing site setting, use the update method:
-```php
-SiteConfig::update('phone', '18487');
-```
-
-## Deleting Settings
-To delete a site setting, use the delete method:
-```php
-SiteConfig::delete('phone');
-```
-
-## Listing all Setting
-To list complete site settings use the list method:
-```php
-SiteConfig::list();
+SiteConfig::store('phone', '123'); # store method
+SiteConfig::get('phone'); # get method
+SiteConfig::update('phone', '18487'); # update method
+SiteConfig::delete('phone'); #delete method
+SiteConfig::list(); # showing all variables as array
 ```
