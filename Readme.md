@@ -6,7 +6,7 @@ This Laravel package provides a simple and efficient way to manage site settings
 To install the package, add it to your Laravel project using Composer:
 ```shell
 $ composer require raza9798/siteconfig
-$ php artisan siteconig:env-sync
+$ php artisan siteconfig:env-sync
 ```
 
 # Usage

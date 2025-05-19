@@ -1,37 +1,42 @@
 {
-    "name": "raza9798/siteconfig",
-    "description": "A Laravel package for managing site configurations.",
-    "keywords": [
-        "laravel",
-        "siteconfig",
-        "configuration",
-        "settings",
-        "environment",
-        "application",
-        "package",
-        "php"
-    ],
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Core\\Siteconfig\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "raza9798",
-            "email": "m.raza9798@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php": "^8.2"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Core\\Siteconfig\\SiteconfigServiceProvider"
-            ]
-        }
+  "name": "raza9798/siteconfig",
+  "description": "A Laravel package for managing site configurations.",
+  "keywords": [
+    "laravel",
+    "siteconfig",
+    "configuration",
+    "settings",
+    "environment",
+    "application",
+    "package",
+    "php"
+  ],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Core\\Siteconfig\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "raza9798",
+      "email": "m.raza9798@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.2"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Core\\Siteconfig\\SiteconfigServiceProvider"
+      ]
+    },
+    "scripts": {
+      "post-autoload-dump": [
+        "@php artisan siteconfig:env-sync"
+      ]
+    }
+  }
 }
