@@ -13,7 +13,7 @@ class EnvSyncCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'siteconig:env-sync';
+    protected $signature = 'siteconfig:env-sync';
 
     /**
      * The console command description.
@@ -42,5 +42,7 @@ class EnvSyncCommand extends Command
                 ]
             );
         }
+
+        $this->info('Configs synced successfully.');
     }
 }
