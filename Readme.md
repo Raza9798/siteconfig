@@ -13,8 +13,8 @@ $ php artisan siteconfig:env-sync
 
 usage in the web base application
 ```php
-SiteConfig::store('phone', '123'); # store method
-SiteConfig::get('phone'); # get method
+SiteConfig::save('phone', '123'); # store method
+SiteConfig::show('phone'); # get method
 SiteConfig::update('phone', '18487'); # update method
 SiteConfig::delete('phone'); #delete method
 SiteConfig::list(); # showing all variables as array
